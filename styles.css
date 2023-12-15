@@ -6,21 +6,22 @@ body {
 }
 
 header {
+    font-family: 'Palatino', serif;
     background-color: #f5f5f5;
     color: #333;
-    padding: 40px;
+    padding: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    min-height: 100vh;
+    min-height: 80vh;
 }
 
 .profile-photo {
     width: 50%;
     max-width: 500px;
     height: auto;
-    margin-right: 20px;
+    margin-right: 50px;
 }
 
 .header-content {
@@ -66,7 +67,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 10px;
+    padding: 20px;
     z-index: 1000;
     background-color: #121212;
 }
@@ -79,13 +80,14 @@ header {
 
 .left-text {
     color: #fff;
-    font-weight: bold;
+    font-size: 1.5em;
+    font-weight: bold
 }
 
 .right-menu, .fixed-nav ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 0 20px;
     display: flex;
 }
 
@@ -120,11 +122,23 @@ header {
     align-items: center;
     justify-content: center;
     color: #fff;
+    padding: 0 50px;
 }
 
-#social-media {
-    background-color: #f5f5f5; /* Slightly lighter gray */
-    min-height: 10vh; /* Minimum height 80% of the viewport height */
+.section-content {
+    max-width: 700px;
+    width: 100%;
+    text-align: left;
+}
+
+.divider {
+    border: 1px solid #fff;
+    margin: 30px 50px; 
+}
+
+#contact {
+    background-color: #f5f5f5;
+    min-height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,12 +162,12 @@ section {
     text-decoration: underline;
 }
 
-.social-icon {
+.contact-icon {
     margin: 20px;
     text-align: center;
 }
 
-.social-icon i {
+.contact-icon i {
     font-size: 2em;
     border-radius: 50%;
 }
@@ -162,4 +176,21 @@ section {
     text-align: center;
     padding: 10px;
     color: #fff;
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 600px) {
+    header {
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .header-content {
+        flex-direction: column;
+    }
+
+    .profile-photo {
+        width: 50%; /* Make the profile photo take the full width */
+        max-width: none; /* Reset max-width */
+        margin-right: 0; /* Remove right margin */
+    }
 }
