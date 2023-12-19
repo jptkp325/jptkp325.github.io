@@ -122,11 +122,27 @@ header {
     align-items: center;
     justify-content: center;
     color: #fff;
-    padding: 0 50px;
+    padding: 50px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #333
 }
 
 .section-content {
-    max-width: 700px;
+    max-width: 800px;
     width: 100%;
     text-align: left;
 }
@@ -146,6 +162,14 @@ header {
 
 section {
     padding: 40px;
+}
+
+.table-content {
+    width: 32%;
+}
+
+.table-description {
+    padding-inline-start: 15px;
 }
 
 .status-description, .blog-description, .position-description {
