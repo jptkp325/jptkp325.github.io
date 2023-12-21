@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 entry.target.style.transform = 'translateY(20px)';
             }
         });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.4 });
 
     fadeInSection.forEach(section => {
         observer.observe(section);
@@ -32,4 +32,13 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     });
+
+    // Toggle mobile menu
+    const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
+    mobileMenuIcon.addEventListener('click', toggleMobileMenu);
+
+    function toggleMobileMenu() {
+        const rightMenu = document.querySelector('.right-menu');
+        rightMenu.classList.toggle('show');
+    }
 });

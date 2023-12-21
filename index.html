@@ -5,10 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <title>Hey, nice to meet you. I'm JP.</title>
 </head>
 <body>
 
+    <!-- Top Nav -->
+    <div class="top-nav">
+        <span class="left-text"><a href="#intro">JP Park</a></span>
+        <ul class="right-menu">
+            <li><a href="#status">Status</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-menu-icon fas fa-bars" onclick="toggleMobileMenu()"></i>
+    </div>
+
+    <!-- Header Section -->
     <header id="intro" class="fade-in-section fade-out-section">
         <div class="header-content">
             <img src="images/jppark112023_noback.png" alt="Photo of JP Park" class="profile-photo">
@@ -16,121 +28,99 @@
                 <h1>Hey, nice to meet you. I'm JP.</h1>
                 <p class="intro-title">Product Person | Contradiction</p>
                 <div class="cta-buttons">
-                    <a href="mailto:jason.phillip.park@gmail.com" class="cta-button">Send a note</a>
+                    <a href="mailto:jason.phillip.park@gmail.com" class="cta-button">Let's talk</a>
                 </div>
             </div>
         </div>
     </header>
 
-    <nav class="fixed-nav">
-        <div class="nav-content">
-            <span class="left-text"><a href="#intro">JP Park</a></span>
-            <ul class="right-menu">
-                <li><a href="#status">Status</a></li>
-                <!-- <li><a href="#blog">Content</a></li> -->
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
+    <!-- Status Section -->
     <section id="status" class="fade-in-section fade-out-section">
         <h1><u>Latest Status</u></h1>
-        <h2>Professional Pursuits</h2>
         <div class="section-content">
-            <p class="status-description">Currently the <b>Group Product Manager</b> at Policygenius leading the Home and Auto insurance vertical which include growth, retention, and internal tooling initiatives.</p>
-            <p class="status-description">Additionally, I provide services as a <b>Consultant and Startup Advisor</b> and I mentor PMs as much as I can to pay-it-forward from my 15+ years in Product Management and Technology </p>
-        </div>
-        <h2>Personal Pursuits</h2>
-        <div class="section-content">
-            <h3>Training</h3>
-            <p class="status-description">Active member of the Brooklyn Zoo Crew training for the next battle. 
-                <a href="https://youtu.be/nWrESJYIhdg?si=kfwnCgc4hvgau-XH&t=272" target="_blank" rel="noopener noreferrer">(recent 1)</a>
-                <a href="https://youtu.be/HGGp2xK_YZc?si=mZz1VGIxEp97N7sO" target="_blank" rel="noopener noreferrer">(recent 2)</a>
-            </p>
-            <p class="status-description">Aspiring cyclist building up the courage to tackle a century ride.</p>
-            <hr class="divider">
-            <h3>Content Backlog</h3>
-            <p>Here's a snapshot of the content I'm consuming: </p>
-            <table>
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>To Do</th>
-                        <th>In Progress</th>
-                        <th>Done</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Reading</td>
-                        <td class="table-content">
-                            <ol class="table-description">
-                                <li>Loving Sports When They Don't Love You Back by Kavitha Davidson</li>
-                                <li>Plays Well With Others by Eric Barker</li>
-                            </ol>
-                        </td>
-                        <td class="table-content">
-                            <ol class="table-description">
-                                <li>Social Chemistry by Marissa King</li>
-                            </ol>
-                        </td>
-                        <td class="table-content">
-                            <ol class="table-description">
-                                <li>The Art of Community by Charles H. Vogl</li>
-                            </ol>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Gaming</td>
-                        <td class="table-content">
-                            <ol class="table-description">
-                                <li>Bear and Breakfast</li>
-                            </ol>
-                        </td>
-                        <td class="table-content">
-                            <ol class="table-description">
-                                <li>The Last of Us</li>
-                                <li>Legend of Zelda: TOTK</li>
-                                <li>Final Fantasy 7</li>
-                            </ol>
-                        </td>
-                        <td class="table-content">
-                            <ol class="table-description">
-                            </ol>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <h2>Professional Pursuits</h2>
+                <p class="status-description">Currently the <b>Group Product Manager</b> at Policygenius leading the Home and Auto insurance vertical which include growth, retention, and internal tooling initiatives.</p>
+                <p class="status-description">Additionally, I provide services as a <b>Consultant and Startup Advisor</b> and I mentor PMs as much as I can to pay-it-forward from my 15+ years in Product Management and Technology </p>
+            <h2>Personal Pursuits</h2>
+                <h3>Training</h3>
+                <p class="status-description">Active member of the Brooklyn Zoo Crew training for the next battle. 
+                    <a href="https://youtu.be/nWrESJYIhdg?si=kfwnCgc4hvgau-XH&t=272" target="_blank" rel="noopener noreferrer">(recent 1)</a>
+                    <a href="https://youtu.be/HGGp2xK_YZc?si=mZz1VGIxEp97N7sO" target="_blank" rel="noopener noreferrer">(recent 2)</a>
+                </p>
+                <p class="status-description">Aspiring cyclist building up the courage to tackle a century ride.</p>
+                <hr class="divider">
+                <h3>Content Backlog</h3>
+                <p>Here's a snapshot of the content I'm consuming: </p>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>To Do</th>
+                                <th>In Progress</th>
+                                <th>Done</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Reading</td>
+                                <td class="table-content">
+                                    <ol class="table-description">
+                                        <li>Loving Sports When They Don't Love You Back by Kavitha Davidson</li>
+                                        <li>Plays Well With Others by Eric Barker</li>
+                                    </ol>
+                                </td>
+                                <td class="table-content">
+                                    <ol class="table-description">
+                                        <li>Social Chemistry by Marissa King</li>
+                                    </ol>
+                                </td>
+                                <td class="table-content">
+                                    <ol class="table-description">
+                                        <li>The Art of Community by Charles H. Vogl</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Gaming</td>
+                                <td class="table-content">
+                                    <ol class="table-description">
+                                        <li>Bear and Breakfast</li>
+                                    </ol>
+                                </td>
+                                <td class="table-content">
+                                    <ol class="table-description">
+                                        <li>The Last of Us</li>
+                                        <li>Legend of Zelda: TOTK</li>
+                                        <li>Final Fantasy 7</li>
+                                    </ol>
+                                </td>
+                                <td class="table-content">
+                                    <ol class="table-description">
+                                    </ol>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
         </div>
     </section>
 
- <!--  <section id="blog" class="fade-in-section fade-out-section">
-        <h2>Blog</h2>
-        <p class="blog-description">Check out my latest thoughts on product management on my <a href="https://yourblogurl.com" target="_blank" class="blog-link">blog</a>.</p>
-    </section> -->
-
+    <!-- Contact Section -->
     <section id="contact" class="fade-in-section fade-out-section">
-        <div class="contact-icon">
-            <a href="https://www.linkedin.com/in/jppark" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
-        </div>
-        <div class="contact-icon">
-            <a href="https://www.instagram.com/stereotyke" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-        </div>
-        <div class="contact-icon">
-            <a href="mailto:jason.phillip.park@gmail.com" target="_blank" rel="noopener noreferrer">
-                <i class="fa-regular fa-envelope"></i>
-            </a>
+        <div class="contact-icons">
+            <a href="https://www.linkedin.com/in/jppark" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/stereotyke" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+            <a href="mailto:jason.phillip.park@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fa-regular fa-envelope"></i></a>
         </div>
     </section>
 
+    <!-- Footer Section -->
     <footer>
         <p class="footer-text">&copy; 2023 JP Park</p>
     </footer>
 
+    <!-- Scripts -->
     <script src="scripts.js"></script>
 </body>
 </html>
