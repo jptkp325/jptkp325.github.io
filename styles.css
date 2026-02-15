@@ -1,17 +1,21 @@
 /* Color Palette */
 :root {
     --color-bg-dark: #121212;
-    --color-bg-status: #132448;
-    --color-bg-header: #f5f5f5;
-    --color-bg-contact: #fff;
+    --color-bg-navy: #132448;
+    --color-bg-light: #f5f5f5;
+    --color-bg-white: #fff;
+    --color-bg-subtle: #eef1f6;
     --color-text-light: #fff;
     --color-text-dark: #333;
+    --color-text-muted: #666;
     --color-accent-blue: #5783db;
     --color-accent-hover: #e34200;
     --color-accent-cyan: #00ccff;
     --color-table-header: #f2f2f2;
     --color-border: #ddd;
     --color-divider: #fff;
+    --color-card-bg: rgba(255, 255, 255, 0.08);
+    --color-card-border: rgba(255, 255, 255, 0.15);
     --focus-outline: 2px solid var(--color-accent-cyan);
     --focus-outline-offset: 2px;
 }
@@ -29,7 +33,8 @@ body {
 }
 
 p {
-    font-size: 1.2em;
+    font-size: 1.1em;
+    line-height: 1.6;
 }
 
 /* Focus-visible styles for accessibility */
@@ -59,8 +64,9 @@ button:focus-visible,
     color: var(--color-text-light);
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
+
 .left-text {
     padding: 15px;
 }
@@ -80,17 +86,16 @@ button:focus-visible,
     display: none;
 }
 
-
-/* Header Styles */
+/* Header / Hero Styles */
 header {
     font-family: 'Palatino', serif;
-    background-color: var(--color-bg-header);
+    background-color: var(--color-bg-light);
     color: var(--color-text-dark);
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    min-height: 70vh;
+    min-height: 90vh;
     padding-top: 60px;
 }
 
@@ -100,7 +105,7 @@ header {
     justify-content: center;
     text-align: center;
     max-width: 1000px;
-    padding: 20px;
+    padding: 40px 20px;
 }
 
 picture {
@@ -108,51 +113,118 @@ picture {
 }
 
 .profile-photo {
-    width: 50%;
-    max-width: 500px;
+    width: 40%;
+    max-width: 400px;
     height: auto;
-    margin-right: 50px;
+    margin-right: 60px;
+    border-radius: 12px;
 }
 
 .header-text {
     flex-grow: 1;
 }
 
+.header-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 0;
+}
+
 .intro-title {
-    font-size: 1.5em;
+    font-size: 1.4em;
+    color: var(--color-text-muted);
+    margin-top: 8px;
 }
 
 .cta-buttons {
-    margin-top: 20px;
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .cta-button {
     display: inline-block;
-    padding: 20px 40px;
-    margin-right: 10px;
+    padding: 16px 32px;
     background-color: var(--color-accent-blue);
     color: var(--color-text-light);
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    font-size: 1.25em;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1.1em;
+    font-weight: bold;
 }
 
 .cta-button:hover {
     background-color: var(--color-accent-hover);
+    transform: translateY(-1px);
 }
 
-/* Status Section Styles */
-#status {
-    min-height: 80vh;
-    text-align: center;
+.cta-button-alt {
+    background-color: transparent;
+    color: var(--color-accent-blue);
+    border: 2px solid var(--color-accent-blue);
+}
+
+.cta-button-alt:hover {
+    background-color: var(--color-accent-blue);
+    color: var(--color-text-light);
+}
+
+/* Section Shared Styles */
+.section-heading {
+    font-family: 'Palatino', serif;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.section-content {
+    max-width: 900px;
+    width: 100%;
+    text-align: left;
+}
+
+/* About Section */
+#about {
+    background-color: var(--color-bg-navy);
+    color: var(--color-text-light);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    color: var(--color-text-light);
-    padding: 30px 50px;
-    background-color: var(--color-bg-status);
+    padding: 80px 50px;
+}
+
+#about .section-heading {
+    text-align: center;
+    width: 100%;
+}
+
+#about a {
+    color: var(--color-accent-cyan);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.about-block h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: var(--color-accent-cyan);
+}
+
+.content-backlog {
+    margin-top: 50px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.content-backlog h3 {
+    font-size: 1.3em;
+    color: var(--color-accent-cyan);
 }
 
 .table-container {
@@ -167,7 +239,7 @@ table {
 
 th, td {
     border: 1px solid var(--color-border);
-    padding: 5px;
+    padding: 8px;
     text-align: left;
 }
 
@@ -189,58 +261,221 @@ ol {
 }
 
 li {
+    margin-bottom: 8px;
+}
+
+/* Coaching Section */
+#coaching {
+    background-color: var(--color-bg-white);
+    color: var(--color-text-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 50px;
+}
+
+#coaching .section-heading {
+    text-align: center;
+    width: 100%;
+}
+
+.coaching-tagline {
+    text-align: center;
+    font-size: 1.3em;
+    color: var(--color-text-muted);
+    margin-top: -5px;
+    margin-bottom: 40px;
+}
+
+.coaching-offer {
+    margin-bottom: 60px;
+}
+
+.coaching-offer h3 {
+    font-size: 1.4em;
+    margin-bottom: 20px;
+}
+
+.offer-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.offer-card {
+    background-color: var(--color-bg-subtle);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.offer-card i {
+    font-size: 2em;
+    color: var(--color-accent-blue);
+    margin-bottom: 15px;
+}
+
+.offer-card h4 {
+    font-size: 1.15em;
     margin-bottom: 10px;
 }
 
-.section-content {
-    max-width: 1000px;
-    width: 100%;
-    text-align: left;
+.offer-card p {
+    font-size: 1em;
+    color: var(--color-text-muted);
+    margin: 0;
 }
 
-.section-content p {
-    margin-left: 20px;
+/* How It Works */
+.how-it-works {
+    margin-bottom: 60px;
 }
 
-.divider {
-    border: 1px solid var(--color-divider);
-    margin: 30px 50px;
+.how-it-works h3 {
+    font-size: 1.4em;
+    margin-bottom: 25px;
 }
 
-/* Contact Section Styles */
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.step {
+    text-align: center;
+}
+
+.step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--color-accent-blue);
+    color: var(--color-text-light);
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.step h4 {
+    font-size: 1.15em;
+    margin-bottom: 8px;
+}
+
+.step p {
+    font-size: 1em;
+    color: var(--color-text-muted);
+    margin: 0;
+}
+
+/* Testimonials */
+.testimonials h3 {
+    font-size: 1.4em;
+    margin-bottom: 20px;
+}
+
+.testimonial-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.testimonial-card {
+    background-color: var(--color-bg-subtle);
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 4px solid var(--color-accent-blue);
+}
+
+.testimonial-quote {
+    font-style: italic;
+    font-size: 1.05em;
+    line-height: 1.6;
+    margin: 0 0 15px 0;
+}
+
+.testimonial-author {
+    font-size: 0.95em;
+    color: var(--color-text-muted);
+    margin: 0;
+}
+
+/* Final CTA Section */
+#cta {
+    background-color: var(--color-bg-navy);
+    color: var(--color-text-light);
+    text-align: center;
+    padding: 80px 50px;
+}
+
+.final-cta {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.final-cta h2 {
+    font-family: 'Palatino', serif;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.final-cta p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.final-cta .cta-button {
+    font-size: 1.15em;
+    padding: 18px 40px;
+}
+
+/* Contact Section */
 #contact {
-    background-color: var(--color-bg-contact);
-    min-height: 15vh;
+    background-color: var(--color-bg-white);
+    min-height: auto;
+    padding: 40px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .contact-icons {
-    margin: 20px;
+    margin: 0;
     text-align: center;
 }
 
+.contact-icons a {
+    color: var(--color-text-dark);
+    transition: color 0.2s ease;
+}
+
+.contact-icons a:hover {
+    color: var(--color-accent-blue);
+}
+
 .contact-icons i {
-    font-size: 3em;
-    padding: 5px;
-    border-radius: 50%;
+    font-size: 2.5em;
+    padding: 10px;
 }
 
 /* Footer Styles */
 footer {
     text-align: center;
-    padding: 5px;
+    padding: 15px;
     color: var(--color-text-light);
-    font-size: 1em;
+    font-size: 0.9em;
 }
 
-.fade-in-section, .fade-out-section {
+/* Animations */
+.fade-in-section {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
-
 
 /* Tablet breakpoint */
 @media screen and (max-width: 768px) {
@@ -249,18 +484,42 @@ footer {
     }
 
     .profile-photo {
-        width: 60%;
+        width: 50%;
         max-width: none;
         margin-right: 0;
         margin-bottom: 20px;
     }
 
-    .intro-title {
-        font-size: 1.3em;
+    .header-text h1 {
+        font-size: 2em;
     }
 
-    #status {
-        padding: 25px 40px;
+    .intro-title {
+        font-size: 1.2em;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .offer-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .testimonial-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    #about, #coaching, #cta {
+        padding: 60px 30px;
     }
 
     table {
@@ -271,11 +530,19 @@ footer {
 /* Mobile breakpoint */
 @media screen and (max-width: 600px) {
     .profile-photo {
-        width: 70%;
+        width: 60%;
+    }
+
+    .header-text h1 {
+        font-size: 1.8em;
     }
 
     .intro-title {
-        font-size: 1.2em;
+        font-size: 1.1em;
+    }
+
+    .section-heading {
+        font-size: 1.6em;
     }
 
     .top-nav .right-menu {
@@ -304,22 +571,26 @@ footer {
         cursor: pointer;
     }
 
-    #status {
-        padding: 20px 40px;
+    #about, #coaching, #cta {
+        padding: 50px 20px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .final-cta h2 {
+        font-size: 1.6em;
     }
 
     #contact {
-        min-height: 10vh;
-    }
-
-    .contact-icons {
-        margin: 20px;
+        padding: 30px 20px;
     }
 
     .contact-icons i {
         font-size: 2em;
-        padding: 10px;
-        border-radius: 50%;
+        padding: 8px;
     }
 
     footer {
