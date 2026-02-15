@@ -3,27 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JP Park - Group Product Manager, consultant, startup advisor, and product management mentor with 15+ years of experience.">
+    <meta name="author" content="JP Park">
+    <link rel="canonical" href="https://jptkp325.github.io/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="JP Park - Product Person">
+    <meta property="og:description" content="Group Product Manager, consultant, startup advisor, and PM mentor with 15+ years of experience.">
+    <meta property="og:image" content="https://jptkp325.github.io/images/jppark-800.png">
+    <meta property="og:url" content="https://jptkp325.github.io/">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F44B;</text></svg>">
+
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <title>Hey, nice to meet you. I'm JP.</title>
 </head>
 <body>
 
     <!-- Top Nav -->
-    <div class="top-nav">
+    <nav class="top-nav" aria-label="Main navigation">
         <span class="left-text"><a href="#intro">JP</a></span>
         <ul class="right-menu">
             <li><a href="#status">Status</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <i class="mobile-menu-icon fas fa-bars" onclick="toggleMobileMenu()"></i>
-    </div>
+        <i class="mobile-menu-icon fas fa-bars"
+           role="button"
+           tabindex="0"
+           aria-label="Toggle navigation menu"
+           aria-expanded="false"></i>
+    </nav>
 
     <!-- Header Section -->
     <header id="intro" class="fade-in-section fade-out-section">
         <div class="header-content">
-            <img src="images/jppark112023_noback.png" alt="Photo of JP Park" class="profile-photo">
+            <picture>
+                <source
+                    type="image/webp"
+                    srcset="images/jppark-400.webp 400w, images/jppark-800.webp 800w"
+                    sizes="(max-width: 600px) 70vw, (max-width: 768px) 60vw, 500px">
+                <img
+                    src="images/jppark-800.png"
+                    srcset="images/jppark-400.png 400w, images/jppark-800.png 800w"
+                    sizes="(max-width: 600px) 70vw, (max-width: 768px) 60vw, 500px"
+                    alt="Photo of JP Park"
+                    class="profile-photo"
+                    width="800"
+                    height="1083"
+                    loading="eager">
+            </picture>
             <div class="header-text">
                 <h1>Hey, nice to meet you. I'm JP.</h1>
                 <p class="intro-title">Product Person | Contradiction</p>
@@ -36,14 +68,14 @@
 
     <!-- Status Section -->
     <section id="status" class="fade-in-section fade-out-section">
-        <h1><u>Latest Status</u></br>(As of 1/1/24)</h1>
+        <h2><u>Latest Status</u><br>(As of 2/15/26)</h2>
         <div class="section-content">
             <h2>Professional</h2>
                 <p class="status-description">Currently the <b>Group Product Manager</b> at Policygenius leading the Home and Auto insurance vertical which include growth, retention, and internal tooling initiatives.</p>
                 <p class="status-description">Additionally, I provide services as a <b>Consultant and Startup Advisor</b> and I mentor PMs as much as I can to pay-it-forward from my 15+ years in Product Management and Technology </p>
             <h2>Personal</h2>
                 <h3>Training</h3>
-                <p class="status-description">Active member of the Brooklyn Zoo Crew training for the next battle. 
+                <p class="status-description">Active member of the Brooklyn Zoo Crew training for the next battle.
                     <a href="https://youtu.be/nWrESJYIhdg?si=kfwnCgc4hvgau-XH&t=272" target="_blank" rel="noopener noreferrer">(recent 1)</a>
                     <a href="https://youtu.be/HGGp2xK_YZc?si=mZz1VGIxEp97N7sO" target="_blank" rel="noopener noreferrer">(recent 2)</a>
                 </p>
@@ -55,15 +87,15 @@
                     <table>
                         <thead>
                             <tr>
-                                <th></th>
-                                <th>To Do</th>
-                                <th>In Progress</th>
-                                <th>Done</th>
+                                <th scope="col"></th>
+                                <th scope="col">To Do</th>
+                                <th scope="col">In Progress</th>
+                                <th scope="col">Done</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Reading</td>
+                                <th scope="row">Reading</th>
                                 <td class="table-content">
                                     <ol class="table-description">
                                         <li>Loving Sports When They Don't Love You Back by Kavitha Davidson</li>
@@ -82,7 +114,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>Gaming</td>
+                                <th scope="row">Gaming</th>
                                 <td class="table-content">
                                     <ol class="table-description">
                                         <li>Bear and Breakfast</li>
@@ -96,8 +128,7 @@
                                     </ol>
                                 </td>
                                 <td class="table-content">
-                                    <ol class="table-description">
-                                    </ol>
+                                    <span class="table-description">&mdash;</span>
                                 </td>
                             </tr>
                         </tbody>
@@ -109,15 +140,15 @@
     <!-- Contact Section -->
     <section id="contact" class="fade-in-section fade-out-section">
         <div class="contact-icons">
-            <a href="https://www.linkedin.com/in/jppark" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://www.instagram.com/stereotyke" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
-            <a href="mailto:jason.phillip.park@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fa-regular fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/jppark" target="_blank" rel="noopener noreferrer" aria-label="JP Park on LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/stereotyke" target="_blank" rel="noopener noreferrer" aria-label="JP Park on Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+            <a href="mailto:jason.phillip.park@gmail.com" rel="noopener noreferrer" aria-label="Email JP Park"><i class="fa-regular fa-envelope" aria-hidden="true"></i></a>
         </div>
     </section>
 
     <!-- Footer Section -->
     <footer>
-        <p class="footer-text">&copy; 2023 JP Park</p>
+        <p class="footer-text">&copy; 2026 JP Park</p>
     </footer>
 
     <!-- Scripts -->
