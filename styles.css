@@ -1,22 +1,18 @@
-/* Color Palette */
+/* Color Palette: Warm Clay */
 :root {
-    --color-bg-dark: #121212;
-    --color-bg-navy: #132448;
-    --color-bg-light: #f5f5f5;
-    --color-bg-white: #fff;
-    --color-bg-subtle: #eef1f6;
-    --color-text-light: #fff;
-    --color-text-dark: #333;
-    --color-text-muted: #666;
-    --color-accent-blue: #5783db;
-    --color-accent-hover: #e34200;
-    --color-accent-cyan: #00ccff;
-    --color-table-header: #f2f2f2;
-    --color-border: #ddd;
-    --color-divider: #fff;
-    --color-card-bg: rgba(255, 255, 255, 0.08);
-    --color-card-border: rgba(255, 255, 255, 0.15);
-    --focus-outline: 2px solid var(--color-accent-cyan);
+    --color-bg-primary: #FAF7F2;
+    --color-bg-secondary: #F0EBE3;
+    --color-bg-dark: #2C2825;
+    --color-bg-white: #FFFFFF;
+    --color-text-primary: #2C2825;
+    --color-text-secondary: #6B6560;
+    --color-text-on-dark: #FAF7F2;
+    --color-accent-primary: #C4653A;
+    --color-accent-hover: #A8502B;
+    --color-accent-secondary: #5B7B6A;
+    --color-border: #D9D3CB;
+    --color-table-header: #F0EBE3;
+    --focus-outline: 2px solid var(--color-accent-primary);
     --focus-outline-offset: 2px;
 }
 
@@ -29,7 +25,8 @@ body {
     font-family: 'Helvetica Neue', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--color-bg-dark);
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
 }
 
 p {
@@ -49,7 +46,7 @@ button:focus-visible,
 /* Top Nav Styles */
 .top-nav {
     background-color: var(--color-bg-dark);
-    color: var(--color-text-light);
+    color: var(--color-text-on-dark);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -61,7 +58,7 @@ button:focus-visible,
 }
 
 .top-nav a {
-    color: var(--color-text-light);
+    color: var(--color-text-on-dark);
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1em;
@@ -82,6 +79,11 @@ button:focus-visible,
     padding: 15px;
 }
 
+.top-nav .right-menu a.current {
+    border-bottom: 2px solid var(--color-accent-primary);
+    padding-bottom: 2px;
+}
+
 .top-nav .mobile-menu-icon {
     display: none;
 }
@@ -89,8 +91,8 @@ button:focus-visible,
 /* Header / Hero Styles */
 header {
     font-family: 'Palatino', serif;
-    background-color: var(--color-bg-light);
-    color: var(--color-text-dark);
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -131,7 +133,7 @@ picture {
 
 .intro-title {
     font-size: 1.4em;
-    color: var(--color-text-muted);
+    color: var(--color-text-secondary);
     margin-top: 8px;
 }
 
@@ -146,8 +148,8 @@ picture {
 .cta-button {
     display: inline-block;
     padding: 16px 32px;
-    background-color: var(--color-accent-blue);
-    color: var(--color-text-light);
+    background-color: var(--color-accent-primary);
+    color: var(--color-bg-white);
     text-decoration: none;
     border-radius: 6px;
     transition: background-color 0.3s ease, transform 0.2s ease;
@@ -162,13 +164,54 @@ picture {
 
 .cta-button-alt {
     background-color: transparent;
-    color: var(--color-accent-blue);
-    border: 2px solid var(--color-accent-blue);
+    color: var(--color-accent-primary);
+    border: 2px solid var(--color-accent-primary);
 }
 
 .cta-button-alt:hover {
-    background-color: var(--color-accent-blue);
-    color: var(--color-text-light);
+    background-color: var(--color-accent-primary);
+    color: var(--color-bg-white);
+}
+
+/* Home Snapshot Section */
+.home-snapshot {
+    background-color: var(--color-bg-secondary);
+    padding: 60px 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.home-snapshot .section-content {
+    text-align: center;
+}
+
+.home-snapshot p {
+    font-size: 1.15em;
+    color: var(--color-text-secondary);
+    max-width: 680px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* Page Header (for About, Coaching subpages) */
+.page-header {
+    padding: 100px 50px 40px;
+    text-align: center;
+    background-color: var(--color-bg-primary);
+}
+
+.page-header h1 {
+    font-family: 'Palatino', serif;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.page-header .page-intro {
+    font-size: 1.15em;
+    color: var(--color-text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
 }
 
 /* Section Shared Styles */
@@ -185,22 +228,25 @@ picture {
 }
 
 /* About Section */
-#about {
-    background-color: var(--color-bg-navy);
-    color: var(--color-text-light);
+.about-section {
+    background-color: var(--color-bg-secondary);
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 80px 50px;
+    padding: 60px 50px;
 }
 
-#about .section-heading {
-    text-align: center;
+.about-section .section-heading {
+    text-align: left;
     width: 100%;
 }
 
-#about a {
-    color: var(--color-accent-cyan);
+.about-section a {
+    color: var(--color-accent-primary);
+}
+
+.about-section-alt {
+    background-color: var(--color-bg-primary);
 }
 
 .about-grid {
@@ -213,18 +259,25 @@ picture {
 .about-block h3 {
     font-size: 1.3em;
     margin-bottom: 10px;
-    color: var(--color-accent-cyan);
+    color: var(--color-accent-secondary);
 }
 
+/* Content Backlog */
 .content-backlog {
-    margin-top: 50px;
-    padding-top: 40px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: var(--color-bg-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 50px;
 }
 
-.content-backlog h3 {
-    font-size: 1.3em;
-    color: var(--color-accent-cyan);
+.content-backlog .section-content {
+    max-width: 900px;
+}
+
+.content-backlog .section-heading {
+    color: var(--color-text-primary);
+    text-align: left;
 }
 
 .table-container {
@@ -245,13 +298,13 @@ th, td {
 
 th {
     background-color: var(--color-table-header);
-    color: var(--color-text-dark);
+    color: var(--color-text-primary);
     text-align: center;
 }
 
 tbody th {
     background-color: transparent;
-    color: var(--color-text-light);
+    color: var(--color-text-primary);
     text-align: left;
     font-weight: bold;
 }
@@ -264,210 +317,130 @@ li {
     margin-bottom: 8px;
 }
 
-/* Coaching Section */
-#coaching {
-    background-color: var(--color-bg-white);
-    color: var(--color-text-dark);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 80px 50px;
-}
-
-#coaching .section-heading {
-    text-align: center;
-    width: 100%;
-}
-
-.coaching-tagline {
-    text-align: center;
-    font-size: 1.3em;
-    color: var(--color-text-muted);
-    margin-top: -5px;
-    margin-bottom: 40px;
-}
-
-.coaching-offer {
-    margin-bottom: 60px;
-}
-
-.coaching-offer h3 {
-    font-size: 1.4em;
-    margin-bottom: 20px;
-}
-
-.offer-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.offer-card {
-    background-color: var(--color-bg-subtle);
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.offer-card i {
-    font-size: 2em;
-    color: var(--color-accent-blue);
-    margin-bottom: 15px;
-}
-
-.offer-card h4 {
-    font-size: 1.15em;
-    margin-bottom: 10px;
-}
-
-.offer-card p {
-    font-size: 1em;
-    color: var(--color-text-muted);
-    margin: 0;
-}
-
-/* How It Works */
-.how-it-works {
-    margin-bottom: 60px;
-}
-
-.how-it-works h3 {
-    font-size: 1.4em;
-    margin-bottom: 25px;
-}
-
-.steps {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
-.step {
-    text-align: center;
-}
-
-.step-number {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background-color: var(--color-accent-blue);
-    color: var(--color-text-light);
-    font-size: 1.3em;
-    font-weight: bold;
-    margin-bottom: 12px;
-}
-
-.step h4 {
-    font-size: 1.15em;
-    margin-bottom: 8px;
-}
-
-.step p {
-    font-size: 1em;
-    color: var(--color-text-muted);
-    margin: 0;
-}
-
-/* Testimonials */
-.testimonials h3 {
-    font-size: 1.4em;
-    margin-bottom: 20px;
-}
-
-.testimonial-cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-}
-
-.testimonial-card {
-    background-color: var(--color-bg-subtle);
-    padding: 30px;
-    border-radius: 10px;
-    border-left: 4px solid var(--color-accent-blue);
-}
-
-.testimonial-quote {
-    font-style: italic;
-    font-size: 1.05em;
-    line-height: 1.6;
-    margin: 0 0 15px 0;
-}
-
-.testimonial-author {
-    font-size: 0.95em;
-    color: var(--color-text-muted);
-    margin: 0;
-}
-
-/* Final CTA Section */
-#cta {
-    background-color: var(--color-bg-navy);
-    color: var(--color-text-light);
-    text-align: center;
-    padding: 80px 50px;
-}
-
-.final-cta {
-    max-width: 600px;
+/* Coaching Page: Narrative Sections */
+.coaching-philosophy,
+.coaching-experience {
+    max-width: 680px;
     margin: 0 auto;
+    padding: 40px 50px;
+    font-family: 'Palatino', serif;
+    font-size: 1.15em;
+    line-height: 1.8;
+    color: var(--color-text-primary);
 }
 
-.final-cta h2 {
+.coaching-philosophy p,
+.coaching-experience p {
+    margin-bottom: 1.2em;
+    font-size: 1em;
+}
+
+/* Coaching Areas: Soft List */
+.coaching-areas {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 30px 50px 40px;
+}
+
+.coaching-areas p.areas-intro {
+    font-size: 1.1em;
+    color: var(--color-text-secondary);
+    margin-bottom: 20px;
+}
+
+.coaching-areas ul {
+    list-style: none;
+    padding: 0;
+}
+
+.coaching-areas ul li {
+    padding: 16px 20px;
+    margin-bottom: 12px;
+    border-left: 3px solid var(--color-accent-primary);
+    background-color: var(--color-bg-secondary);
+    border-radius: 0 6px 6px 0;
+    line-height: 1.6;
+}
+
+.coaching-areas ul li strong {
+    color: var(--color-text-primary);
+}
+
+/* Contact Footer Variants */
+.contact-footer {
+    padding: 60px 50px;
+    text-align: center;
+}
+
+.contact-footer h2 {
     font-family: 'Palatino', serif;
-    font-size: 2em;
+    font-size: 1.8em;
     margin-bottom: 10px;
 }
 
-.final-cta p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-    color: rgba(255, 255, 255, 0.8);
+.contact-footer p {
+    color: var(--color-text-secondary);
+    max-width: 500px;
+    margin: 0 auto 25px;
 }
 
-.final-cta .cta-button {
-    font-size: 1.15em;
-    padding: 18px 40px;
-}
-
-/* Contact Section */
-#contact {
-    background-color: var(--color-bg-white);
-    min-height: auto;
-    padding: 40px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.contact-icons {
+.contact-footer .contact-icons {
     margin: 0;
     text-align: center;
 }
 
-.contact-icons a {
-    color: var(--color-text-dark);
+.contact-footer .contact-icons a {
+    color: var(--color-text-primary);
     transition: color 0.2s ease;
 }
 
-.contact-icons a:hover {
-    color: var(--color-accent-blue);
+.contact-footer .contact-icons a:hover {
+    color: var(--color-accent-primary);
 }
 
-.contact-icons i {
+.contact-footer .contact-icons i {
     font-size: 2.5em;
     padding: 10px;
+}
+
+/* Personal contact (Home, About) */
+.contact-personal {
+    background-color: var(--color-bg-secondary);
+}
+
+/* Coaching contact */
+.contact-coaching {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-on-dark);
+}
+
+.contact-coaching h2 {
+    color: var(--color-text-on-dark);
+}
+
+.contact-coaching p {
+    color: rgba(250, 247, 242, 0.8);
+}
+
+.contact-coaching .cta-button {
+    margin-bottom: 25px;
+}
+
+.contact-coaching .contact-icons a {
+    color: var(--color-text-on-dark);
+}
+
+.contact-coaching .contact-icons a:hover {
+    color: var(--color-accent-primary);
 }
 
 /* Footer Styles */
 footer {
     text-align: center;
     padding: 15px;
-    color: var(--color-text-light);
+    color: var(--color-text-secondary);
     font-size: 0.9em;
+    background-color: var(--color-bg-primary);
 }
 
 /* Animations */
@@ -503,23 +476,20 @@ footer {
         gap: 20px;
     }
 
-    .offer-cards {
-        grid-template-columns: 1fr;
-        gap: 20px;
+    .about-section,
+    .content-backlog,
+    .coaching-philosophy,
+    .coaching-experience,
+    .coaching-areas,
+    .contact-footer,
+    .home-snapshot {
+        padding-left: 30px;
+        padding-right: 30px;
     }
 
-    .steps {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-
-    .testimonial-cards {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    #about, #coaching, #cta {
-        padding: 60px 30px;
+    .page-header {
+        padding-left: 30px;
+        padding-right: 30px;
     }
 
     table {
@@ -543,6 +513,10 @@ footer {
 
     .section-heading {
         font-size: 1.6em;
+    }
+
+    .page-header h1 {
+        font-size: 1.8em;
     }
 
     .top-nav .right-menu {
@@ -571,8 +545,19 @@ footer {
         cursor: pointer;
     }
 
-    #about, #coaching, #cta {
-        padding: 50px 20px;
+    .about-section,
+    .content-backlog,
+    .coaching-philosophy,
+    .coaching-experience,
+    .coaching-areas,
+    .contact-footer,
+    .home-snapshot {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .page-header {
+        padding: 80px 20px 30px;
     }
 
     .cta-buttons {
@@ -580,15 +565,11 @@ footer {
         align-items: center;
     }
 
-    .final-cta h2 {
-        font-size: 1.6em;
+    .contact-footer h2 {
+        font-size: 1.5em;
     }
 
-    #contact {
-        padding: 30px 20px;
-    }
-
-    .contact-icons i {
+    .contact-footer .contact-icons i {
         font-size: 2em;
         padding: 8px;
     }

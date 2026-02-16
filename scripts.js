@@ -66,4 +66,17 @@ document.addEventListener('DOMContentLoaded', function () {
             closeMobileMenu();
         }
     });
+
+    // --- Active nav link highlighting ---
+    const currentPath = window.location.pathname;
+    document.querySelectorAll('.right-menu a').forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === currentPath ||
+            (currentPath.endsWith('/') && href === '/') ||
+            (currentPath.endsWith('index.html') && href === '/') ||
+            currentPath.endsWith(href)) {
+            link.classList.add('current');
+            link.setAttribute('aria-current', 'page');
+        }
+    });
 });
