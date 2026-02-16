@@ -1,25 +1,18 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // --- Fade-in/out animation via IntersectionObserver ---
-    const fadeInSection = document.querySelectorAll('.fade-in-section');
-    const fadeOutSection = document.querySelectorAll('.fade-out-section');
+    // --- Fade-in animation via IntersectionObserver ---
+    const fadeInSections = document.querySelectorAll('.fade-in-section');
 
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.style.opacity = '1';
                 entry.target.style.transform = 'translateY(0)';
-            } else {
-                entry.target.style.opacity = '0';
-                entry.target.style.transform = 'translateY(20px)';
+                observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.4 });
+    }, { threshold: 0.15 });
 
-    fadeInSection.forEach(section => {
-        observer.observe(section);
-    });
-
-    fadeOutSection.forEach(section => {
+    fadeInSections.forEach(section => {
         observer.observe(section);
     });
 
