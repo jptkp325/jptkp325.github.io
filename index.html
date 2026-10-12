@@ -3,92 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="JP Park - VP, Product at Setpoint. PM coach, consultant, and startup advisor with 15+ years of product leadership experience.">
+    <meta name="description" content="Real talk for your tech career. JP Park, VP Product at Setpoint, coaches early and mid-career people in tech through promotions, pivots, and the hard conversations.">
     <meta name="author" content="JP Park">
     <link rel="canonical" href="https://jptkp325.github.io/">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="JP Park - Product Leader &amp; PM Coach">
-    <meta property="og:description" content="VP, Product at Setpoint. PM coach, consultant, and startup advisor with 15+ years of product leadership experience.">
+    <meta property="og:title" content="JP Park | Career advice for people in tech">
+    <meta property="og:description" content="Real talk for your tech career. JP Park, VP Product at Setpoint, coaches early and mid-career people in tech through promotions, pivots, and the hard conversations.">
     <meta property="og:image" content="https://jptkp325.github.io/images/jppark-800.png">
     <meta property="og:url" content="https://jptkp325.github.io/">
     <meta property="og:type" content="website">
 
-    <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F44B;</text></svg>">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <title>JP Park - Product Leader &amp; PM Coach</title>
+    <title>JP Park | Career advice for people in tech</title>
 </head>
 <body class="page-home">
 
-    <!-- Top Nav -->
     <nav class="top-nav" aria-label="Main navigation">
         <span class="left-text"><a href="/">JP</a></span>
         <ul class="right-menu">
-            <li><a href="/">Home</a></li>
-            <li><a href="/about.html">About</a></li>
+            <li><a href="/notes.html">Notes</a></li>
             <li><a href="/coaching.html">Coaching</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="mailto:jason.phillip.park@gmail.com?subject=Intro%20chat" class="cta-button">Book a chat</a></li>
         </ul>
-        <i class="mobile-menu-icon fas fa-bars"
-           role="button"
-           tabindex="0"
-           aria-label="Toggle navigation menu"
-           aria-expanded="false"></i>
+        <i class="mobile-menu-icon fas fa-bars" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false"></i>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="fade-in-section">
-        <div class="header-content">
-            <picture>
-                <source
-                    type="image/webp"
-                    srcset="images/jppark-400.webp 400w, images/jppark-800.webp 800w"
-                    sizes="(max-width: 600px) 70vw, (max-width: 768px) 60vw, 500px">
-                <img
-                    src="images/jppark-800.png"
-                    srcset="images/jppark-400.png 400w, images/jppark-800.png 800w"
-                    sizes="(max-width: 600px) 70vw, (max-width: 768px) 60vw, 500px"
-                    alt="Photo of JP Park"
-                    class="profile-photo"
-                    width="800"
-                    height="1083"
-                    loading="eager">
-            </picture>
-            <div class="header-text">
-                <h1>Hey, I'm JP.</h1>
-                <p class="intro-title">Product leader. Coach. Human.</p>
-                <div class="cta-buttons">
-                    <a href="/about.html" class="cta-button">Get to Know Me</a>
-                    <a href="/coaching.html" class="cta-button cta-button-alt">Work With Me</a>
+    <header class="hero">
+        <div class="wrap hero-grid">
+            <div>
+                <p class="eyebrow">Career advice for people in tech</p>
+                <h1>Real talk for your <em>tech career.</em> No frameworks required.</h1>
+                <p class="lede">I'm JP. I lead product at a startup, and I've spent 15+ years hiring, managing, promoting, and occasionally letting down people in tech. I'll tell you what I actually think.</p>
+                <div class="cta-row">
+                    <a href="mailto:jason.phillip.park@gmail.com?subject=Intro%20chat" class="cta-button">Book a free intro chat</a>
+                    <a href="/notes.html" class="cta-button cta-button-alt">Read my notes</a>
                 </div>
+            </div>
+            <div class="hero-photo">
+                <picture>
+                    <source type="image/webp" srcset="images/jppark-400.webp 400w, images/jppark-800.webp 800w" sizes="(max-width: 860px) 340px, 400px">
+                    <img src="images/jppark-800.png" srcset="images/jppark-400.png 400w, images/jppark-800.png 800w" sizes="(max-width: 860px) 340px, 400px" alt="Photo of JP Park" width="800" height="1083" loading="eager">
+                </picture>
             </div>
         </div>
     </header>
 
-    <!-- Snapshot -->
-    <section class="home-snapshot fade-in-section">
-        <div class="section-content">
-            <p>I'm a VP of Product at Setpoint with 15+ years in product management and technology. I also coach PMs one-on-one and advise startups &mdash; because the best way to get better at this work is to help others do the same.</p>
+    <section class="section section-alt fade-in-section">
+        <div class="wrap">
+            <p class="eyebrow">Sound familiar?</p>
+            <h2 class="section-title">The questions people bring me.</h2>
+            <ul class="moments">
+                <li>
+                    <blockquote>&ldquo;I'm good at my job and I still feel stuck.&rdquo;</blockquote>
+                    <p>Usually it's not a skills problem. It's a visibility, scope, or &ldquo;wrong seat&rdquo; problem, and each has a different fix.</p>
+                </li>
+                <li>
+                    <blockquote>&ldquo;Should I go into management?&rdquo;</blockquote>
+                    <p>Maybe. But not because it's the only way up. Let's figure out if you'd actually like the job.</p>
+                </li>
+                <li>
+                    <blockquote>&ldquo;My manager and I just don't click.&rdquo;</blockquote>
+                    <p>Managing up is a learnable skill. So is knowing when to stop trying and move on.</p>
+                </li>
+                <li>
+                    <blockquote>&ldquo;Do I take the offer?&rdquo;</blockquote>
+                    <p>Startup or big company, more money or more growth. I'll help you think it through, not just hand you a pros and cons list.</p>
+                </li>
+            </ul>
         </div>
     </section>
 
-    <!-- Contact Footer (Personal) -->
-    <section class="contact-footer contact-personal fade-in-section">
-        <h2>Say hey.</h2>
-        <p>I'm always up for connecting with interesting people.</p>
-        <div class="contact-icons">
-            <a href="https://www.linkedin.com/in/jppark" target="_blank" rel="noopener noreferrer" aria-label="JP Park on LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
-            <a href="https://www.instagram.com/stereotyke" target="_blank" rel="noopener noreferrer" aria-label="JP Park on Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
-            <a href="mailto:jason.phillip.park@gmail.com" rel="noopener noreferrer" aria-label="Email JP Park"><i class="fa-regular fa-envelope" aria-hidden="true"></i></a>
+    <section class="section section-dark fade-in-section">
+        <div class="wrap">
+            <p class="eyebrow">What I believe</p>
+            <h2 class="section-title">A few opinions, up front.</h2>
+            <ol class="beliefs">
+                <li>
+                    <div>
+                        <h3>Your career is not a ladder.</h3>
+                        <p>Titles are a lagging indicator. Chase scope, learning, and people worth working for, and the titles tend to follow.</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <h3>Most career advice is written for someone else.</h3>
+                        <p>What works for a FAANG staff engineer will not work for a designer at a 40-person startup. Context beats playbooks.</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <h3>The hard conversations are the job.</h3>
+                        <p>Asking for the raise, pushing back on a bad plan, telling your boss you're unhappy. The people who get good at these move faster than the ones who get good at slides.</p>
+                    </div>
+                </li>
+            </ol>
         </div>
     </section>
 
-    <!-- Footer -->
+    <section class="section fade-in-section">
+        <div class="wrap">
+            <p class="eyebrow">Notes</p>
+            <h2 class="section-title">Things I'd tell a friend over coffee.</h2>
+            <ul class="note-list">
+                <li>
+                    <a class="note-link" href="/notes/should-you-become-a-manager.html">
+                        <div>
+                            <span class="tag">Growth</span>
+                            <h3>Should you become a manager?</h3>
+                            <p>Four questions to ask yourself before you say yes.</p>
+                        </div>
+                        <span class="note-meta">4 min read</span>
+                    </a>
+                </li>
+            </ul>
+            <p style="margin-top:28px"><a href="/notes.html">All notes &rarr;</a></p>
+        </div>
+    </section>
+
+    <section class="section section-dark closer fade-in-section">
+        <div class="wrap">
+            <h2>Let's talk.</h2>
+            <p>Thirty minutes, no pitch. Tell me where you are and where you want to be, and I'll tell you what I honestly think.</p>
+            <a href="mailto:jason.phillip.park@gmail.com?subject=Intro%20chat" class="cta-button">Book a free intro chat</a>
+            <div class="contact-icons">
+                <a href="https://www.linkedin.com/in/jppark" target="_blank" rel="noopener noreferrer" aria-label="JP Park on LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/stereotyke" target="_blank" rel="noopener noreferrer" aria-label="JP Park on Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                <a href="mailto:jason.phillip.park@gmail.com?subject=Intro%20chat" aria-label="Email JP Park"><i class="fa-regular fa-envelope" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </section>
+
     <footer>
-        <p class="footer-text">&copy; 2026 JP Park</p>
+        <p>&copy; 2026 JP Park</p>
     </footer>
 
     <script src="scripts.js"></script>
